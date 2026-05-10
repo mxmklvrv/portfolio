@@ -76,20 +76,45 @@
         animation: fade-in 0.8s ease-out both;
     }
 
-    @keyframes star-drift{
+    @keyframes star-drift {
+
         0%,
-        100%{
-            transform: translate(0,0);
+        100% {
+            opacity: 1;
+            transform: translate(0, 0);
         }
-        25%{
+
+        25% {
             transform: translate(20px, -30px);
+            opacity: 0.4;
         }
-        50%{
+
+        50% {
             transform: translate(-15px, -20px);
+            opacity: 0.8;
         }
-        75%{
+
+        75% {
             transform: translate(30px, 10px);
+            opacity: 0.2;
         }
 
     }
+
+    @keyframes pulse-subtle {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.8;
+        }
+    }
+}
+
+@utility star {
+    @apply absolute rounded-full bg-white;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
 }
