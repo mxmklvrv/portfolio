@@ -12,9 +12,11 @@ const navLinks = [
 
 // need to add color for logo
 // for the dot as well 21.07
+
+// when screen is minimised, no menu visible straight away --> fixed
 export const Navbar = () => {
-    const [isMobileMenuOn, setisMobileMenuOn] = useState(false);
-    return <header className='fixed top-0 left-0 right-0 bg-transparent py-5'>
+    const [isMobileMenuOn, setisMobileMenuOn] = useState(true);
+    return <header className='fixed top-0 left-0 right-0 bg-transparent py-5 z-50'>
         <nav className="container mx-auto px-6 flex items-center justify-between">
             <a href="#" className="text-xl font-bold tracking-tight ">
                 MXM<span>.</span>
