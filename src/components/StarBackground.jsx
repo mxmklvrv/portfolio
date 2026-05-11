@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 
 
-export const StarBackroubnd = () => {
+export const StarBackground = () => {
     const [stars, setStars] = useState([])
 
     useEffect(() => {
@@ -29,15 +29,13 @@ export const StarBackroubnd = () => {
     }
     return <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         {stars.map((star) => (
-            <div key={star.id} className="star" style={{
+            <div key={star.id} className="star animate-pulse-subtle" style={{
                 width: `${star.size}px`,
                 height: `${star.size}px`,
                 left: `${star.x}%`,
                 top: `${star.y}%`,
                 opacity: star.opacity,
-                animation: `star-drift ${40 + star.animationDuration}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 5}s`,
-
+                animationDuration: `${star.animationDuration}s`,
             }} />
         ))}
     </div>;

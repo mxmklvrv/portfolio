@@ -1,30 +1,55 @@
-import { StarBackroubnd } from "@/components/StarBackground";
+import { StarBackground } from "@/components/StarBackground";
+import { Button } from "@/components/Button"
+import { ArrowRight, Download } from "lucide-react";
+
 
 export const Hero = () => {
     return <section className="relative min-h-screen items-center overflow-hidden">
         {/* Background, need to add space anim here later */}
         <div className="absolute inset-0">
-        <StarBackroubnd />
-            {/* <img
-                src="/hero.jpg"
-                alt="hero img"
-                className="w-full h-full object-cover opacity-40"
-            /> */}
-            {/* <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background"/> */}
+            <StarBackground />
         </div>
-        {/* Dots white
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {[...Array(55)].map((_, i) => (
-                <div className="absolute w-1 h-1 rounded-full opacity-60"
-                style={{
-                    backgroundColor: "#ffffff",
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                    animation: `star-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
-                    animationDelay: `${Math.random() *5}s`
-                }}
-                />
-            ))}
-        </div> */}
+        <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* left text */}
+                <div className="space-y-8">
+                    <div className="animate-fade-in">
+                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
+                            <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                            Junior Software Engineer * smth else
+                        </span>
+                    </div>
+
+                    {/* headline */}
+                    <div className="space-y-4">
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+                            some <span className="text-primary glow-text">strong text</span>
+                            <br />
+                            inspiring text
+                            <br />
+                            deep af.
+                        </h1>
+                        <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+                            hi! i'm max blalablalbalbbalbalablbalablbalablablab
+                            blablablablablablalbablablablablablablablablablablabl
+                            lablablablablabalbablablab
+                        </p>
+                    </div>
+                    {/* ctas buttons */}
+                    <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+                        <Button size="lg">
+                            Contact me <ArrowRight className="w-5 h-5" />
+                        </Button>
+                        <Button size="lg">
+                            Download CV <Download className="w-5 h-5" />
+                        </Button>
+
+                    </div>
+                    {/* Links */}
+
+                </div>
+                {/* right profile img */}
+            </div>
+        </div>
     </section>;
 };
