@@ -1,7 +1,19 @@
 import { StarBackground } from "@/components/StarBackground";
 import { Button } from "@/components/Button"
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, ChevronsDown } from "lucide-react";
 
+const skills = [
+    "C",
+    "C++",
+    "React",
+    "Tailwind CSS",
+    "Figma",
+    "Git",
+    "GDB",
+    "Microsoft Dynamics NAV",
+    "Zendesk",
+    "Qlik Sense",
+]
 
 export const Hero = () => {
     return <section className="relative min-h-screen items-center overflow-hidden">
@@ -38,18 +50,51 @@ export const Hero = () => {
                     {/* ctas buttons */}
                     <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
                         <Button size="lg">
-                            Contact me <ArrowRight className="w-5 h-5" />
+                            Contact me <ArrowRight className="w-5 h-5 animate-" />
                         </Button>
                         <Button size="lg">
                             Download CV <Download className="w-5 h-5" />
                         </Button>
-
                     </div>
-                    {/* Links */}
-
                 </div>
                 {/* right profile img */}
+                <div className="relative animate-fade-in animation-delay-300">
+                    {/* picture of my face */}
+
+                    <div className="relative max-w-md mx-auto">
+                        <div className="relative glass rounded-3xl p-2 glow-border">
+                            <img src="/face.jpeg" alt="maxim kleverov" className="w-full aspect[4/5] object-cover rounded-2xl" />
+                        </div>
+                    </div>
+                </div>
             </div>
+            {/* Skilsl */}
+            <div className="mt-20 animate-fade-in animation-delay-500">
+                <p className="text-sm text-muted-foreground mb-6 text-center">
+                    Technologies I work with
+                </p>
+                <div className="relative overflow-hidden">
+                    <div className="flex animate-blade-runner">
+                        {[...skills, ...skills].map((skill, idx) => (
+                            <div key={idx} className="flex-shrink-0 px-8 py-4">
+                                <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skill}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 
+      animate-fade-in animation-delay-500"
+        >
+            <a
+                href="#about"
+                className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+            >
+                <span className="text-xs uppercase tracking-wider">Scroll</span>
+                <ChevronsDown className="w-6 h-6 animate-bounce" />
+            </a>
         </div>
     </section>;
 };
