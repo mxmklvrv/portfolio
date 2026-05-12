@@ -1,25 +1,27 @@
+import { Link, ArrowUpRight } from "lucide-react";
+import{ Button } from "@/components/Button"
 
 const projects = [
 	{
-		title: "Minishell",
+		title: "Custom Unix Shell",
 		description: "minishell bla bla bla",
 		image: "/projects/minishell.png",
 		tags: ["C", "valgrind", "GDB"],
-		github: "#",
+		github: "https://github.com/mxmklvrv/Custom-Unix-Shell",
 	},
 	{
-		title: "minirt",
+		title: "Ray Tracing Engine",
 		description: "minirt bla bla bla",
 		image: "/projects/minirt.png",
 		tags: ["C", "valgrind", "GDB"],
-		github: "#",
+		github: "https://github.com/mxmklvrv/Ray-Tracing-Engine",
 	},
 	{
-		title: "philo",
+		title: "Concurrent Dining Philosophers Simulation",
 		description: "philo bla bla bla",
 		image: "/projects/philo.png",
 		tags: ["C", "valgrind", "GDB"],
-		github: "#",
+		github: "https://github.com/mxmklvrv/Concurrent-Dining-Philosophers-Simulation",
 	},
 ]
 
@@ -51,14 +53,36 @@ export const Projects = () =>{
 									<img src={projects.image} alt={projects.title} className="w-full h-full object-cover transition-transform duration-900 group-hover:scale-110"/>
 									<div className=" absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60"/>
 									{/* Overlay links */}
-									<div>
-										<a></a>
+									<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+										<a href={projects.github} className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
+                                            <Link className="w-5 h-5"/>
+                                        </a> 
 									</div>
 								</div>
+                                {/* Content */}
+                                <div className="p-6 space-y-4">
+                                    <div className="flex items-start justify-between">
+                                        <h3 className="text-XL font-semibold group-hover:text-primary">{projects.title}</h3>
+                                        <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"/>
+                                    </div>
+                                    <p className="flex flex-wrap gap-2">{projects.description}</p>
+                                    <div>{projects.tags.map((tag, tagIdx) => (
+                                        <span 
+                                        key={tagIdx} 
+                                        className="px-4 py-2 rounded-full bg-surface text-xs font-medium border border-border/69 text-muted-foreground hover:border-primary/69 hover:text-primary duration 300 transition-all" >{tag}</span>
+                                    ))}</div>
+                                </div>
 							</div>
-						)) }
+						))}
 					</div>
+                    <div className="text-center mt-12 animate-fade-in animation-delay-400">
+                        <Button>
+                            View All projects
+                            <ArrowUpRight className="w-5 h-5"/>
+                        </Button>
+                    </div>
 				</div>
 			</section>
 		);
-}; // 1.46 overlaylinks 
+};
+
