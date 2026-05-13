@@ -90,4 +90,3 @@ export const Experience = () => {
         </div>
     </section>;
 };
-// 1.58 timline
