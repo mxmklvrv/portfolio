@@ -80,11 +80,13 @@
             filter: blure(0);
         }
     }
-    @keyframes blade-runner{
-        0%{
+
+    @keyframes blade-runner {
+        0% {
             transform: translateX(0);
         }
-        100%{
+
+        100% {
             transform: translateX(-50%);
         }
     }
@@ -97,7 +99,7 @@
         animation: pulse-subtle 2s infinite;
     }
 
-    .animate-blade-runner{
+    .animate-blade-runner {
         animation: blade-runner 30s linear infinite;
     }
 
@@ -116,8 +118,14 @@
     .animation-delay-400 {
         animation-delay: 400ms;
     }
-     .animation-delay-500 {
+
+    .animation-delay-500 {
         animation-delay: 500ms;
+    }
+
+    .timeline-glow {
+        box-shadow: 0 0 40px color-mix(in srgb, var(--color-primary) 35%, transparent),
+            0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
     }
 
 
