@@ -52,7 +52,7 @@ export const Experience = () => {
                 <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">Experience that <span className="font-serif italic font-normal text-white"> makes difference.</span>
                 </h2>
                 <p className="text-muted-foreground animate-fade-in animation-delay-200">
-                    A timeline of my professional growth from restaurant worker to account manager and future Software Developer .
+                    A timeline of my professional growth from restaurant worker to account manager and future Software Developer.
                 </p>
             </div>
             {/* Timeline */}

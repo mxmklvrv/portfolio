@@ -4,23 +4,23 @@ import{ Button } from "@/components/Button"
 const projects = [
 	{
 		title: "Custom Unix Shell",
-		description: "minishell bla bla bla",
+		description: "A Unix-like shell built in C that supports command parsing, pipes, redirections, and process management. Focused on low-level system calls, memory handling, and robust error control.",
 		image: "/projects/minishell.png",
-		tags: ["C", "valgrind", "GDB"],
+		tags: ["C", "Unix", "System programming"],
 		github: "https://github.com/mxmklvrv/Custom-Unix-Shell",
 	},
 	{
 		title: "Ray Tracing Engine",
-		description: "minirt bla bla bla",
+		description: "A 3D ray tracing engine written in C that simulates realistic lighting, reflections, and shadows. Implements mathematical models for light physics and object intersection algorithms.",
 		image: "/projects/minirt.png",
-		tags: ["C", "valgrind", "GDB"],
+		tags: ["C", "Graphics", "Algorithms"],
 		github: "https://github.com/mxmklvrv/Ray-Tracing-Engine",
 	},
 	{
 		title: "Concurrent Dining Philosophers Simulation",
-		description: "philo bla bla bla",
+		description: "A multithreaded simulation of the classic dining philosophers problem, demonstrating synchronization, deadlock prevention, and thread-safe resource sharing using mutexes.",
 		image: "/projects/philo.png",
-		tags: ["C", "valgrind", "GDB"],
+		tags: ["C", "Concurrency", "Multithreading"],
 		github: "https://github.com/mxmklvrv/Concurrent-Dining-Philosophers-Simulation",
 	},
 ]
@@ -37,8 +37,7 @@ export const Projects = () =>{
 							<span className="font-serif italic font-normal text-white"> gave me knowledge.</span>
 						</h2>
 						<p className="text-muted-foreground animate-fade-in animation-delay-200">
-							selection of my recent work from complex bla bla, to
-							beautiful bla bla
+							 Projects spanning systems programming, real-time simulation, and graphics rendering — focused on performance, low-level control, and deep understanding of computer systems.
 						</p>
 					</div>
 					{/* Projects grid */}
@@ -56,7 +55,7 @@ export const Projects = () =>{
 									<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 										<a href={projects.github} className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all">
                                             <Link className="w-5 h-5"/>
-                                        </a> 
+                                        </a>
 									</div>
 								</div>
                                 {/* Content */}
@@ -67,8 +66,8 @@ export const Projects = () =>{
                                     </div>
                                     <p className="flex flex-wrap gap-2">{projects.description}</p>
                                     <div>{projects.tags.map((tag, tagIdx) => (
-                                        <span 
-                                        key={tagIdx} 
+                                        <span
+                                        key={tagIdx}
                                         className="px-4 py-2 rounded-full bg-surface text-xs font-medium border border-border/69 text-muted-foreground hover:border-primary/69 hover:text-primary duration 300 transition-all" >{tag}</span>
                                     ))}</div>
                                 </div>
