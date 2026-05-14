@@ -10,6 +10,7 @@ const skills = [
     "Figma",
     "Git",
     "GDB",
+    "Valgrind",
     "Microsoft Dynamics NAV",
     "Zendesk",
     "Qlik Sense",
@@ -28,33 +29,39 @@ export const Hero = () => {
                     <div className="animate-fade-in">
                         <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                            Junior Software Engineer * smth else
+                            Junior Software Developer • Backend • Frontend • Systems
                         </span>
                     </div>
 
                     {/* headline */}
                     <div className="space-y-4">
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                            some <span className="text-primary glow-text">strong text</span>
+                            Building <span className="text-primary glow-text">reliable</span>
                             <br />
-                            inspiring text
+                            backend & frontend
                             <br />
-                            deep af.
+                            applications.
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                            hi! i'm max blalablalbalbbalbalablbalablbalablablab
-                            blablablablablablalbablablablablablablablablablablabl
-                            lablablablablabalbablablab
+                            Junior software developer focused on backend systems,
+                            modern web development, and low-level programming.
+                            Currently studying at Hive Helsinki, building projects
+                            with C, Unix systems, React, while
+                            exploring performance, clean architecture, and user-focused design.
                         </p>
                     </div>
                     {/* ctas buttons */}
                     <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-                        <Button size="lg">
-                            Contact me <ArrowRight className="w-5 h-5 animate-" />
-                        </Button>
-                        <Button size="lg">
+                        <a href="#contact">
+                            <Button size="lg">
+                                Contact me <ArrowRight className="w-5 h-5" />
+                            </Button>
+                        </a>
+                        <a href="/maxim_kleverov_it.pdf" download="Maxim_Kleverov_CV">
+                        <Button size="lg" variant="outline">
                             Download CV <Download className="w-5 h-5" />
                         </Button>
+                        </a>
                     </div>
                 </div>
                 {/* right profile img */}
@@ -63,12 +70,12 @@ export const Hero = () => {
 
                     <div className="relative max-w-md mx-auto">
                         <div className="relative glass rounded-3xl p-2 glow-border">
-                            <img src="/face.jpeg" alt="maxim kleverov" className="w-full aspect[4/5] object-cover rounded-2xl" />
+                            <img src="/Hero.jpeg" alt="maxim kleverov" className="w-full aspect[4/5] object-cover rounded-2xl" />
                         </div>
                     </div>
                 </div>
             </div>
-            {/* Skilsl */}
+            {/* Skills */}
             <div className="mt-20 animate-fade-in animation-delay-500">
                 <p className="text-sm text-muted-foreground mb-6 text-center">
                     Technologies I work with

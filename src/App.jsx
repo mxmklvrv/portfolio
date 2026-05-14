@@ -19,7 +19,6 @@ function App() {
                 <Projects />
                 <Experience />
                 <Contact />
-
             </main>
         </div>
     );

@@ -35,17 +35,25 @@ export const About = () => {
                         <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">About me</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-                        Building the future,
-                        <span className="font-serif italic font-normal text-white"> one function at a time.</span>
+                        Building software with,
+                        <span className="font-serif italic font-normal text-white"> curiosity, structure, and purpose..</span>
                     </h2>
                     <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
-                        <p>a lot of text about me</p>
-                        <p>a bit more text about me</p>
-                        <p>you think thats it? another one</p>
+                        <p>My journey into software development started through curiosity
+                            about how systems work behind the scenes — from processes and
+                            memory management to the architecture that powers modern applications.</p>
+                        <p>At Hive Helsinki, I’ve focused on low-level programming,
+                            backend development, and collaborative problem solving through
+                            hands-on projects built with C, Unix systems, and modern web technologies.</p>
+                        <p>Before transitioning into tech, I spent several years working in
+                            operations, logistics, and customer-facing roles. That experience
+                            taught me how to communicate clearly, stay calm under pressure,
+                            and approach problems with a practical mindset.</p>
                     </div>
                     <div className="glass round-2xl p-6 glow-border animate-fade-in animation-delay-300">
-                        <p className="text-lg font-mediumitalic text-foreground">
-                            "My mission, some cool af text"
+                        <p className="text-lg font-medium italic text-foreground">
+                            “I enjoy building software that is not only functional,
+                            but understandable, reliable, and built with intention.”
                         </p>
                     </div>
                 </div>
